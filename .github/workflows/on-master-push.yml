@@ -11,12 +11,12 @@ env:
 jobs:
   build:
     name: Build Docker image
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     env:
-      VERSION: 1.16.0
+      VERSION: 1.17.0
     steps:
       - name: Login to Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u lukechilds --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u robertol --password-stdin
 
       - name: Checkout project
         uses: actions/checkout@v2
@@ -34,6 +34,6 @@ jobs:
           docker buildx build \
           --platform linux/amd64,linux/arm64 \
           --build-arg VERSION=$VERSION \
-          --tag lukechilds/electrumx:v$VERSION \
-          --tag lukechilds/electrumx:latest \
+          --tag robertol/electrumx:v$VERSION \
+          --tag robertol/electrumx:latest \
           --output "type=registry" .
