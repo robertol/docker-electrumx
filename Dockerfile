@@ -1,7 +1,7 @@
-ARG VERSION=1.16.0
+ARG VERSION=1.17.0
 
 FROM python:3.7-alpine3.11
-LABEL maintainer="Luke Childs <lukechilds123@gmail.com>"
+LABEL maintainer="Roberto Oliveira <smuxbr@gmail.com>"
 
 ARG VERSION
 
