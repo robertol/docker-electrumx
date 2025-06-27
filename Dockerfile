@@ -13,7 +13,7 @@ RUN chmod a+x /usr/local/bin/* && \
     pip install aiohttp pylru plyvel websockets uvloop && \
     git clone -b $VERSION https://github.com/spesmilo/electrumx.git && \
     cd electrumx && \
-    python setup.py install && \
+    pip install . && \
     apk del git build-base && \
     rm -rf /tmp/*
 
