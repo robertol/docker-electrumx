@@ -1,6 +1,6 @@
 ARG VERSION=1.17.0
 
-FROM python:3.10-alpine3.11
+FROM python:3.10-alpine3.13
 LABEL maintainer="Roberto Oliveira <smuxbr@gmail.com>"
 
 ARG VERSION
